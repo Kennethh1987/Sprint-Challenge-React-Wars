@@ -1,17 +1,21 @@
 import React from 'react';
-import { Card, Button, CardHeader, CardFooter, CardBody,
-    CardTitle, CardText } from 'reactstrap';
+import { Card,  CardHeader, CardBody, 
+    CardTitle, CardText, Row, Col } from 'reactstrap';
 
-const StarCard = ({people}) => {
-    return       <Card>
-    <CardHeader>Name {people.name}</CardHeader>
+const StarCard = (props) => {
+    return   ( <Row>
+             <Col xs="2">
+     
+     <Card>
+    <CardHeader> Name: {props.name}</CardHeader>
     <CardBody>
-      <CardTitle>Special Title Treatment</CardTitle>
-      <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-      <Button>Go somewhere</Button>
-    </CardBody>
-    <CardFooter>Footer</CardFooter>
-  </Card>
+      <CardTitle> Height:{props.height}</CardTitle>
+      <CardText>Will get better at styling!</CardText>
+        </CardBody>
+  
+        </Card>
+    </Col> 
+  </Row>)
 }
 
 

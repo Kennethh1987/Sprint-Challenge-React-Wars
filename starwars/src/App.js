@@ -3,19 +3,20 @@ import './App.css';
 import axios from 'axios';
 import StarCard from "./components/StarCard"
 
+
 const App = () => {
   const [people, setPeople] = useState([]);
 
 
   useEffect(() => {
     axios
-      .get("https://swapi.co/api/people/1/")
+      .get("https://swapi.co/api/people/")
       .then(response => {
-        console.log(response.data)
-        setPeople(response.data)
+        console.log(response.data.results)
+        setPeople(response.data.results)
       })
       .catch(error => [
-        console.log(error)
+        console.log(error => [console.log("Error, error!", error)])
       ])
   }, []);
 
@@ -23,17 +24,17 @@ const App = () => {
   return ( 
   <div className ="persons"> 
   
-      {people.map(persons => {
+      {people.map((persons,index ) => {
         return ( 
-          <StarCard />
+            <StarCard key={index}name={persons.name}height={persons.height} />
         )
       })} 
-      </div>
-  );
+     
 
-  return (
+  
     <div className="App">
       <h1 className="Header">React Wars</h1>
+    </div> 
     </div>
   );
 }
