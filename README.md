@@ -26,13 +26,26 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+React is a JavaScript library created by Facebook. React is a User Interface (UI) library. React is a tool for building UI components
+
+Problem solved:The main problem solved by react is the development of large applications that have temporal data changes. The data in such applications is not static so it changes over time. We can look at React as the V layer in model-view-controller (MVC) pattern of software development.
+
 - [ ] What does it mean to _think_ in react?
+
+It means to think in componenets and componenet hierarchies. For example, looking at a webpage, and recognizing the navigation is a component, and the links on it to other pages, search bar, and logo are in it's component hierarchy.
 
 - [ ] Describe state.
 
+State is any given data that a component holds. This can include data that is rendered to a page or just some behind the sense data that the component is holding. With hooks when the data is changed this will trigger a rerender. Effects will also be applied when state is changed.
+
 - [ ] Describe props.
 
+Props are the data passwed into a component. They are like arugments for the component. You can pass is callback functions, primatives or even variables as props. This props can be be referenced inside the component and control logic, styling or anything thing that state could.
+
 - [ ] What are side effects, and how do you sync effects in a React component to state or prop changes?
+
+Side effects are changes that occur outside of the component scope. For example pulling in data from an API or logging data, anything that is not part of the component should use an effect. The useEffect() hook takes in two arguments. The first being a callback function to run when the effect is triggered and the second being an array of state or prop values to tigger this effect when any of these are changed.
+
 
 ## Project Set Up
 
