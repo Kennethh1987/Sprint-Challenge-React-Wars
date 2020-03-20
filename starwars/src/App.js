@@ -2,6 +2,12 @@ import React, {useState,useEffect} from 'react';
 import './App.css';
 import axios from 'axios';
 import StarCard from "./components/StarCard"
+import styled from 'styled-components';
+
+const StarCard = styled.StarCard`
+cursor: pointer;
+`;
+
 
 
 const App = () => {
