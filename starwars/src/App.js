@@ -4,9 +4,19 @@ import axios from 'axios';
 import StarCard from "./components/StarCard"
 import styled from 'styled-components';
 
-const StarCard = styled.StarCard`
+const Container = styled.div`
 cursor: pointer;
+opacity:100%;
+display:flex;
+width:100%;
+opacity:0%;
+&:hover {
+opacity:100%
+}; 
+
+
 `;
+
 
 
 
@@ -29,13 +39,14 @@ const App = () => {
   
   return ( 
   <div className ="persons"> 
-  
+   <Container className="CardContain">
       {people.map((persons,index ) => {
         return ( 
-            <StarCard key={index}name={persons.name}height={persons.height} />
-        )
+        
+           <StarCard key={index}name={persons.name}height={persons.height} />
+         )
       })} 
-     
+    </Container>
 
   
     <div className="App">
